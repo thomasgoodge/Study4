@@ -15,15 +15,22 @@ public class RNG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        randomNum = Random.Range(0, 999999999);
-        print(numCode + randomNum.ToString());
+        generateRNG();
+       // print(numCode + randomNum.ToString());
 
     }
 
     void Update()
     {
-        displayText.text = "Number to call :" + numCode + randomNum.ToString();
+        numberPrompt = numCode + randomNum.ToString();
+        displayText.text = "Number to call: " + numberPrompt;
+    }
+
+
+    void generateRNG()
+    {
+        randomNum = Random.Range(0, 999999999);
+
     }
 
 }
