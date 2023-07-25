@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class RNG : MonoBehaviour
+{
+
+    public string numCode = "07";
+
+    public int randomNum;
+    public string numberPrompt;
+
+    public Text displayText;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        randomNum = Random.Range(0, 999999999);
+        print(numCode + randomNum.ToString());
+
+    }
+
+    void Update()
+    {
+        displayText.text = "Number to call :" + numCode + randomNum.ToString();
+    }
+
+}
