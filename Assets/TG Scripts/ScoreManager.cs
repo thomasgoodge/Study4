@@ -81,7 +81,7 @@ public class ScoreManager : MonoBehaviour
         writer.WriteLine(diamondScoreText.text);
         writer.WriteLine(emeraldScoreText.text);
         writer.WriteLine("Total Diamonds: " + diamondsSpawned);
-        writer.WriteLine("Total Emeralds: " +emeraldsSpawned);
+        writer.WriteLine("Total Emeralds: " + emeraldsSpawned);
 
         writer.Close();
         //StreamReader reader = new StreamReader(path);
