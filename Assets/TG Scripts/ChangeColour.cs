@@ -5,13 +5,13 @@ using UnityEngine;
 public class ChangeColour : MonoBehaviour
 {
 
-    public Material keyMaterial; 
+    private Material keyMaterial; 
     public Color currentColor;
-    public Color baseColour = new Color (1f, 1f, 1f, 50f);
-    public Color amberColour = new Color (1f, 1f, 1f, 50f);
-    public Color redColour = new Color (1f, 1f, 1f, 50f);
+    public Color baseColour = new Color (1f, 1f, 1f, 80f);
+    public Color amberColour = new Color (255f, 120f, 0f, 80f);
+    public Color redColour = new Color (255f, 0f, 0f, 80f);
 
-    public float speed = 1f;
+    public float speed = 0.05f;
 
     public GameObject HazardOnsetManagerScript;
     
@@ -20,11 +20,25 @@ public class ChangeColour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //access the material attached to this object
+        keyMaterial = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("o"))
+        {
+        StartCoroutine(SetColourToAmber());
+        }
+        if (Input.GetKey("p"))
+        {
+        StartCoroutine(SetColourToRed());
+        }
+        if (Input.GetKey("i"))
+        {
+        StartCoroutine(SetColourToBase());
+        }
 
         if (HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard == true) {
             {
@@ -34,35 +48,34 @@ public class ChangeColour : MonoBehaviour
         
     }
 
-    public void SetColourToAmber()
+    private IEnumerator SetColourToAmber()
     {
         float tick = 0f;
         currentColor = keyMaterial.color;
         
-
         while (currentColor != amberColour)
         {
             tick += Time.deltaTime * speed;
             keyMaterial.color = Color.Lerp(currentColor, amberColour, tick);
+            yield return null;
 
         }
     }
 
-    public void SetColourToRed()
+    private IEnumerator SetColourToRed()
     {
         float tick = 0f;
         currentColor = keyMaterial.color;
-        
-
         while (currentColor != redColour)
         {
             tick += Time.deltaTime * speed;
             keyMaterial.color = Color.Lerp(currentColor, redColour, tick);
+            yield return null;
             
         }    
     }
     
-    public void SetColourToBase()
+    private IEnumerator SetColourToBase()
     {
         float tick = 0f;
         currentColor = keyMaterial.color;
@@ -72,6 +85,7 @@ public class ChangeColour : MonoBehaviour
         {
             tick += Time.deltaTime * speed;
             keyMaterial.color = Color.Lerp(currentColor, baseColour, tick);
+            yield return null;
             
         }    
     }
