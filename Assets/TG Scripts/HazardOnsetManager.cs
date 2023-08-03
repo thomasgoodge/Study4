@@ -7,6 +7,7 @@ public class HazardOnsetManager : MonoBehaviour
 {
     // Create counters for time and number of gems, as well as initialising a respawn time
     public bool hazard;
+    public bool preHazard;
     public bool currentState;
 
     [SerializeField] public Stopwatch hazardTimeCounter = new Stopwatch();
@@ -40,6 +41,7 @@ public class HazardOnsetManager : MonoBehaviour
         stopwatchRunning = false;
         currentState = false;
         hazard = false;
+        preHazard = false;
         isPaused = false;
 
     }
@@ -48,6 +50,7 @@ public class HazardOnsetManager : MonoBehaviour
     {    
         timer = hazardTimeCounter.ElapsedMilliseconds;
         hazard = CheckHazard();
+        preHazard = CheckPreHazard();
         currentState = CheckSpawn();  
         currentClip = GetCurrentClip();      
 
@@ -83,10 +86,11 @@ public class HazardOnsetManager : MonoBehaviour
 
         if (hazardTimeCounter.ElapsedMilliseconds >= onset && isPaused == false && currentClip != "")
         {
-            PauseGame();
+            //PauseGame();
             StopwatchReset();
             currentClip = "";
             hazard = false;
+            preHazard = false;
         }
 
     }
@@ -126,6 +130,61 @@ public class HazardOnsetManager : MonoBehaviour
         }
         return hazard;
     }
+
+    public bool CheckPreHazard()
+    {
+        if (hazard == false)
+        {
+        //function that checks whether the hazard is active or not.
+        if (preHazard == false)
+        {
+            if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset- 4000)
+            {
+                // if hazard is false and the time is during the window, change to true
+                preHazard = true;
+                return preHazard;
+            }
+            
+            else if (hazard == true)
+            {
+                preHazard = false;
+                return preHazard;
+            }
+            else
+            {
+                preHazard = false;
+                return preHazard;
+            }
+        
+        }
+        
+        else if (preHazard == true)
+        {
+            if (hazardTimeCounter.ElapsedMilliseconds >= onset)
+            {
+                //if the timer is outside the window, turn hazard to false
+                preHazard = false;
+                return preHazard;
+            }
+            else if (hazard == true)
+            {
+                //if the timer is outside the window, turn hazard to false
+                preHazard = false;
+                return preHazard;
+            }
+            else
+            {
+                return preHazard;
+            }
+        }
+        return preHazard;
+        }
+        else
+        {
+            preHazard = false;
+            return preHazard;
+        }
+    }
     // Function to check whether the Spawner should be active or not, as well as time windows for when hazard gems should spawn.
     public bool CheckSpawn()
     {
@@ -158,7 +217,7 @@ public class HazardOnsetManager : MonoBehaviour
 
     }
     
-    public void CheckClip()
+    public void CheckClip()    
     {
         clipRef = GetClipIndex();  
         onset = GetHazardOnset();

@@ -11,7 +11,10 @@ public class ChangeColour : MonoBehaviour
     public Color amberColour = new Color (255f, 120f, 0f, 80f);
     public Color redColour = new Color (255f, 0f, 0f, 80f);
 
-    public float speed = 0.05f;
+    public bool preHazardActive;
+    public bool hazardActive;
+
+    public float speed = 0.5f;
 
     public GameObject HazardOnsetManagerScript;
     
@@ -27,7 +30,9 @@ public class ChangeColour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("o"))
+        preHazardActive =  HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().preHazard;
+        hazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard;
+        /*if (Input.GetKey("o"))
         {
         StartCoroutine(SetColourToAmber());
         }
@@ -39,14 +44,27 @@ public class ChangeColour : MonoBehaviour
         {
         StartCoroutine(SetColourToBase());
         }
+        */
 
-        if (HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard == true) {
+        if (preHazardActive== true && hazardActive == false) 
             {
-                SetColourToAmber();
+               StartCoroutine(SetColourToAmber());
             }
+       else if (hazardActive == true && preHazardActive == false) 
+            {
+                StartCoroutine(SetColourToRed());
+            }
+        else if (hazardActive == false && preHazardActive == false)
+            {
+                StartCoroutine(SetColourToBase());
+            }
+        else
+        {
+            StartCoroutine(SetColourToBase());
         }
-        
     }
+        
+    
 
     private IEnumerator SetColourToAmber()
     {

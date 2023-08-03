@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5794192932445197283}
   - component: {fileID: 5794192932445197282}
   - component: {fileID: 1344775768}
+  - component: {fileID: 2980944187638340234}
   m_Layer: 0
   m_Name: HazardObject
   m_TagString: Hazard
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5794192932445197293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1103, y: 0.0103, z: 0.44}
-  m_LocalScale: {x: 0.053301588, y: 0.053301588, z: 0.02}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.04}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -49,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5794192932445197293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -94,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 75.56}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1344775768
 Rigidbody:
@@ -112,3 +113,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2980944187638340234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5794192932445197293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da76eb4d493d6b41bf5b9a2cd2c5771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 4000

@@ -64,7 +64,8 @@ public class HazardSpawner : MonoBehaviour
         selectSpawner =  HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazardLocation;
         
         //spawnerActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard;
-        spawnerActive = CheckHazardStatus();
+        //spawnerActive = CheckHazardStatus();
+        spawnerActive = CheckPreHazardStatus();
     
          //if the spawner is active from the HazardOnsetManager script
         while (spawnerActive && gemCount <= 3)
@@ -100,19 +101,17 @@ public class HazardSpawner : MonoBehaviour
 
     IEnumerator CorSpawnHazardGem()
     {
-        while (gemCount <= 3)
-            {     
-                // if there are less than 3 gems, spawn a gem in the range of the spawner
-                Vector3 pos = centralspawn + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
-                GameObject alpha = Instantiate(gemPrefab, pos, Quaternion.identity);
-                gemCount++;
-                yield return new WaitForSeconds(0.5f);
-            }
+          
+        // if there are less than 3 gems, spawn a gem in the range of the spawner
+        Vector3 pos = centralspawn + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+        GameObject alpha = Instantiate(gemPrefab, pos, Quaternion.identity);
+        gemCount++;
+        yield return new WaitForSeconds(0.5f);
             
-        if (gemCount > 4)
-            {
-                yield return new WaitForSeconds(1.0f);
-            }        
+            
+      
+        //yield return new WaitForSeconds(1.0f);
+               
     }
 
     public void setSpawnerLocationCongruent()
@@ -178,6 +177,23 @@ public class HazardSpawner : MonoBehaviour
                 return spawnerActive;
             }
         else if (HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard == false)
+            {
+                spawnerActive = false;
+               // print("Inactive");
+                return spawnerActive;
+            }
+            return spawnerActive;
+        }
+
+        public bool CheckPreHazardStatus()
+        {
+        if (HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().preHazard == true)
+            {
+                spawnerActive = true;
+               // print("Active");
+                return spawnerActive;
+            }
+        else if (HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().preHazard == false)
             {
                 spawnerActive = false;
                // print("Inactive");
