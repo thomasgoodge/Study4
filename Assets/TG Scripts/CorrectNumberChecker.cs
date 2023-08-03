@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Text;
 using System.IO;
 
+
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +22,8 @@ public class CorrectNumberChecker : MonoBehaviour
     public long keypressTrialTime;
     public bool keyStopwatchRunning = false;
 
+    public string condition;
+
     public string newNumber;
 
     public Text dialText;
@@ -34,6 +38,8 @@ public class CorrectNumberChecker : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clip;
     public float volume=0.5f;
+    public string date;
+    
 
     
     // Start is called before the first frame update
@@ -41,6 +47,8 @@ public class CorrectNumberChecker : MonoBehaviour
     {
       generateRNG();
       KeyStopwatchStart();
+      condition = SceneManager.GetActiveScene().name;
+
 
     }
 
@@ -51,7 +59,14 @@ public class CorrectNumberChecker : MonoBehaviour
         dialText.text = userNumber;
         scoreText.text = "Numbers dialled: " + score.ToString();
         keypressTrialTime = keypressCounter.ElapsedMilliseconds;
+        WriteString();
         
+    }
+
+    public void CheckDate()
+    {
+        date = System.DateTime.UtcNow.ToString();
+        print(date);
     }
 
     public void checkNumber()
@@ -86,6 +101,8 @@ public class CorrectNumberChecker : MonoBehaviour
         string path = Application.persistentDataPath + "/" + "numbersDialled.txt";
 
         StreamWriter writer = new StreamWriter(path, false);
+        writer.WriteLine(date);
+        writer.WriteLine(condition);
         writer.WriteLine(scoreText.text);        
         writer.WriteLine("Keypresses: " + keypresses);
         writer.WriteLine(keyTimes);        
