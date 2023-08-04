@@ -29,6 +29,7 @@ public class HazardOnsetManager : MonoBehaviour
     public string currentClip;
     public long timer;
     public bool isPaused = false;
+    public bool clipEnded;
 
     List<string> ClipList = new List<string>();
 
@@ -117,7 +118,7 @@ public class HazardOnsetManager : MonoBehaviour
         
         else if (hazard == true)
         {
-            if (hazardTimeCounter.ElapsedMilliseconds >= onset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= offset)
             {
                 //if the timer is outside the window, turn hazard to false
                 hazard = false;
@@ -160,7 +161,7 @@ public class HazardOnsetManager : MonoBehaviour
         
         else if (preHazard == true)
         {
-            if (hazardTimeCounter.ElapsedMilliseconds >= onset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= offset)
             {
                 //if the timer is outside the window, turn hazard to false
                 preHazard = false;

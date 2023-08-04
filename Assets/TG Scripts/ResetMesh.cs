@@ -25,4 +25,18 @@ public class ResetMesh : MonoBehaviour
             Debug.Log("Cube hidden");
 
     }
+
+    public void EnableObject()
+    {
+            //renderer.enabled = true; //(to show the game object)
+
+            gameObject.SetActive(true); //(to hide the game object)
+
+    }
+    public void DisableObject()
+    {
+                       gameObject.SetActive(false); //(to hide the game object)
+
+
+    }
 }

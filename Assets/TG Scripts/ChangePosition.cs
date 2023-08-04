@@ -101,7 +101,7 @@ public GameObject HazardOnsetManagerScript;
 
     void ReturnToPosition()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, startLocation, ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, startLocation, ref velocity, 0.1f);
      
     }
 
