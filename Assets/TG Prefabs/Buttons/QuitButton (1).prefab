@@ -1248,6 +1248,8 @@ GameObject:
   - component: {fileID: 7034083842046186549}
   - component: {fileID: 7034083842046186548}
   - component: {fileID: 6686157018194857772}
+  - component: {fileID: 557630647}
+  - component: {fileID: 5662986476622675118}
   m_Layer: 0
   m_Name: QuitButton (1)
   m_TagString: Untagged
@@ -1262,7 +1264,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7034083842046186551}
-  m_LocalRotation: {x: -0, y: 0.72361875, z: -0, w: 0.69020003}
+  m_LocalRotation: {x: 0, y: 0.723618, z: 0, w: 0.69020075}
   m_LocalPosition: {x: 0.56, y: -0.07, z: 0.066}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
@@ -1392,7 +1394,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8411142723601204475, guid: 5420d8672df87074ea02954d49dc7384, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: QuitApplication, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -1443,7 +1445,7 @@ MonoBehaviour:
   startDimensionIndex: 0
   CanSelect: 0
   CanDeselect: 0
-  VoiceCommand: Select
+  voiceCommand: Select
   voiceRequiresFocus: 1
   profiles:
   - Target: {fileID: 7034083840297079285}
@@ -1788,3 +1790,28 @@ MonoBehaviour:
           m_CallState: 2
   persistentKeywords: 1
   speechConfirmationTooltipPrefab: {fileID: 8046114618238072051, guid: 271778f6c957b524981067a81d238394, type: 3}
+--- !u!114 &557630647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034083842046186551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b01e0f8fa714f442867e88b9b09e7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5662986476622675118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034083842046186551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400193dcb3f1cb7428f321aa192f7d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 0}

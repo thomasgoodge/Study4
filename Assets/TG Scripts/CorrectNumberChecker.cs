@@ -111,7 +111,16 @@ public class CorrectNumberChecker : MonoBehaviour
         writer.Close();
     }
 
-    public void dialOne(string numberInput)
+    public void dialKeyName(string numberInput)
+    {
+        newNumber = numberInput;
+        keypresses++;
+
+       // print(newNumber);
+        sb.Append(newNumber);
+    }
+/*
+public void dialOne(string numberInput)
     {
         newNumber = "1";
         keypresses++;
@@ -197,7 +206,7 @@ public class CorrectNumberChecker : MonoBehaviour
    // print(newNumber);
     sb.Append(newNumber);
     }
-
+*/
     public void deleteLastNumber(string numberInput)
     {
         if (sb.Length > 0)

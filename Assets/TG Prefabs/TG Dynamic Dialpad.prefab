@@ -36,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897952847785238505}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -180, y: 90, z: 0}
+  m_LocalPosition: {x: -180, y: 90, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 897952848986531439}
@@ -57,7 +57,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &897952847785238503
 MonoBehaviour:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897952847785238505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f98e7663599230e419addf153615c144, type: 3}
   m_Name: 
@@ -93,6 +93,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -608,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -2073,7 +2085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897952848535893712}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 90, z: 0}
+  m_LocalPosition: {x: 0, y: 90, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 897952849770991446}
@@ -2130,6 +2142,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 2
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -2645,7 +2669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -2736,7 +2760,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897952848828047239}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 180, y: 90, z: 0}
+  m_LocalPosition: {x: 180, y: 90, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 897952847878710785}
@@ -2757,7 +2781,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &897952848828047241
 MonoBehaviour:
@@ -2793,6 +2817,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -3308,7 +3344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -4926,7 +4962,6 @@ GameObject:
   - component: {fileID: 6350186578173399666}
   - component: {fileID: 6353790679199905702}
   - component: {fileID: 9158025372456989976}
-  - component: {fileID: 164384994193711568}
   - component: {fileID: 1978158571}
   m_Layer: 5
   m_Name: TG Dynamic Dialpad
@@ -4966,9 +5001,9 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -382, y: -313}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6531218991840952164
@@ -5058,19 +5093,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventsToReceive: 1
   debounceThreshold: 0.01
---- !u!114 &164384994193711568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6465937740989500938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 400193dcb3f1cb7428f321aa192f7d9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetCamera: {fileID: 0}
 --- !u!114 &1978158571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5117,8 +5139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156, y: 62.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 18.4, y: 62}
+  m_SizeDelta: {x: 246.1, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6792775541730561304
 CanvasRenderer:
@@ -5396,7 +5418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195399655673376}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -180, y: -90, z: 0}
+  m_LocalPosition: {x: -180, y: -90, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195400431997187}
@@ -5417,7 +5439,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8691195399655673434
 MonoBehaviour:
@@ -5453,6 +5475,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 9
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -5968,7 +6002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -6947,7 +6981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195399850865869}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195400643468495}
@@ -7004,6 +7038,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 5
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -7519,7 +7565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -8283,7 +8329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195399956919247}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -180, z: 0}
+  m_LocalPosition: {x: 0, y: -180, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195401567867732}
@@ -8340,6 +8386,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -8855,7 +8913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -9276,7 +9334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195400046161527}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 180, y: -180, z: 0}
+  m_LocalPosition: {x: 180, y: -180, z: 15}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195401526448560}
@@ -9297,7 +9355,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8691195400046161513
 MonoBehaviour:
@@ -9848,7 +9906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -10270,7 +10328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195400193615154}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 180, y: -90, z: 0}
+  m_LocalPosition: {x: 180, y: -90, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195400558410261}
@@ -10291,7 +10349,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8691195400193615140
 MonoBehaviour:
@@ -10327,6 +10385,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 7
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -10842,7 +10912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -11463,7 +11533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195400400673431}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -180, y: -180, z: 0}
+  m_LocalPosition: {x: -180, y: -180, z: 15}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195399846632820}
@@ -11484,7 +11554,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8691195400400673417
 MonoBehaviour:
@@ -12035,7 +12105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -13281,7 +13351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195400560340069}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 180, y: 0, z: 0}
+  m_LocalPosition: {x: 180, y: 0, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195399660856662}
@@ -13302,7 +13372,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8691195400560339871
 MonoBehaviour:
@@ -13338,6 +13408,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -13853,7 +13935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -14684,6 +14766,7 @@ MonoBehaviour:
   keypresses: 0
   keypressTrialTime: 0
   keyStopwatchRunning: 0
+  condition: 
   newNumber: 
   dialText: {fileID: 2692627749126750088}
   numCode: 07
@@ -14693,6 +14776,7 @@ MonoBehaviour:
   audioSource: {fileID: 2606194246771093220}
   clip: {fileID: 8300000, guid: 0eac0e7747d915d439ba0d499aade8a3, type: 3}
   volume: 0.5
+  date: 
 --- !u!82 &2606194246771093220
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16110,7 +16194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195401101727989}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -90, z: 0}
+  m_LocalPosition: {x: 0, y: -90, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195400588818884}
@@ -16167,6 +16251,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 8
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -16682,7 +16778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0
@@ -17284,7 +17380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195401241786107}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -180, y: 0, z: 0}
+  m_LocalPosition: {x: -180, y: 0, z: 20}
   m_LocalScale: {x: 4473.5547, y: 2232.3438, z: 1296.3444}
   m_Children:
   - {fileID: 8691195401573473897}
@@ -17305,7 +17401,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02, z: 0.016}
+  m_Size: {x: 0.03, y: 0.03, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8691195401241786093
 MonoBehaviour:
@@ -17341,6 +17437,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8691195400817257717}
+        m_TargetAssemblyTypeName: CorrectNumberChecker, Assembly-CSharp
+        m_MethodName: dialKeyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6
           m_BoolArgument: 0
         m_CallState: 2
   TouchEnd:
@@ -17856,7 +17964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.2
+  smoothTime: 2.5
   canStayHere: 1
   hazardActive: 0
   preHazardActive: 0

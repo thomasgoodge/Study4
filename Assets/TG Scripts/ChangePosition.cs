@@ -7,8 +7,12 @@ public class ChangePosition : MonoBehaviour
 
 private Vector3 keyLocation;
 private Vector3 startLocation; 
-private Vector3 addCoords = new Vector3 (0.1f, 0.1f, 0f);
-private Vector3 addDoubleCoords = new Vector3 (0.15f, 0.15f, 0f);
+
+private Vector3 addXCoords = new Vector3 (0.1f, 0f, 0f);
+private Vector3 addYCoords = new Vector3 (0f, 0.1f, 0f);
+private Vector3 addDoubleXCoords = new Vector3 (0.15f, 0f, 0f);
+private Vector3 addDoubleYCoords = new Vector3 (0f, 0.15f, 0f);
+
 private Vector3 subtractCoords = new Vector3 (-0.1f, -0.1f, 0f);
 private Vector3 newLocation;
 
@@ -74,17 +78,17 @@ public GameObject HazardOnsetManagerScript;
         {  
             if (gameObject.name == "1Key"|| gameObject.name == "4Key" || gameObject.name == "7Key" || gameObject.name == "EnterKey")     
             { 
-            newLocation = transform.position + subtractCoords;
+            newLocation = transform.position - addYCoords - addXCoords;
             transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
             }
             else if (gameObject.name == "2Key"|| gameObject.name == "5Key" || gameObject.name == "8Key" || gameObject.name == "0Key")     
             { 
-            newLocation = transform.position + addCoords;
+            newLocation = transform.position + addYCoords + addXCoords;
             transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
             }
             else 
             {
-            newLocation = transform.position + addDoubleCoords;
+            newLocation = transform.position + addDoubleYCoords + addDoubleXCoords;
             transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
             }
         }
