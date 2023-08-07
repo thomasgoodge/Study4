@@ -1111,6 +1111,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1328852767, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
+      propertyPath: m_Name
+      value: KeypadAOI
+      objectReference: {fileID: 0}
     - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1195,58 +1199,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 207908257498073943, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 249030569032620553, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_Name
       value: TG Static Dialpad
       objectReference: {fileID: 0}
-    - target: {fileID: 2473126893777531175, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894144847772, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894378408537, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894573265092, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894614046658, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894893654766, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126895826423020, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249079550825177821, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249079551215111140, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249079552189762442, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6379094531241784787, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: targetCamera
-      value: 
-      objectReference: {fileID: 1524566498}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
 --- !u!1 &2124816737 stripped
