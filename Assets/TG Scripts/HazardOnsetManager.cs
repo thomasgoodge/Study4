@@ -29,7 +29,7 @@ public class HazardOnsetManager : MonoBehaviour
     public string currentClip;
     public long timer;
     public bool isPaused = false;
-    public bool clipEnded;
+   
 
     List<string> ClipList = new List<string>();
 
@@ -85,9 +85,9 @@ public class HazardOnsetManager : MonoBehaviour
 
       
 
-        if (hazardTimeCounter.ElapsedMilliseconds >= onset && isPaused == false && currentClip != "")
+        if (hazardTimeCounter.ElapsedMilliseconds >= length  && currentClip != "")
         {
-            //PauseGame();
+            PauseGame();
             StopwatchReset();
             currentClip = "";
             hazard = false;
@@ -101,7 +101,7 @@ public class HazardOnsetManager : MonoBehaviour
         //function that checks whether the hazard is active or not.
         if (hazard == false)
         {
-            if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset- 1000)
+            if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset - 1000)
             {
                 // if hazard is false and the time is during the window, change to true
                 hazard = true;
@@ -118,10 +118,11 @@ public class HazardOnsetManager : MonoBehaviour
         
         else if (hazard == true)
         {
-            if (hazardTimeCounter.ElapsedMilliseconds >= offset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= onset)
             {
                 //if the timer is outside the window, turn hazard to false
                 hazard = false;
+               
                 return hazard;
             }
             else
@@ -131,61 +132,66 @@ public class HazardOnsetManager : MonoBehaviour
         }
         return hazard;
     }
-
     public bool CheckPreHazard()
     {
         if (hazard == false)
-        {
-        //function that checks whether the hazard is active or not.
-        if (preHazard == false)
-        {
-            if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset- 4000)
-            {
-                // if hazard is false and the time is during the window, change to true
-                preHazard = true;
-                return preHazard;
-            }
+            { 
+              
+            //function that checks whether the hazard is active or not.
+                if (preHazard == false)
+                {
+                   
+                    if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset - 4000 )
+                     {
+                        // if hazard is false and the time is during the window, change to true
+                        preHazard = true;
+                        return preHazard;
+                    }
+                    else if (hazard == true)
+                    {
+                        preHazard = false;
+                        return preHazard;
+                    }
+                    else
+                    {
+                        preHazard = false;
+                
+                        return preHazard;
+                    }
+                
+                }
             
-            else if (hazard == true)
-            {
-                preHazard = false;
-                return preHazard;
-            }
-            else
-            {
-                preHazard = false;
-                return preHazard;
-            }
-        
+            else if (preHazard == true)
+                {   
+                    if (hazardTimeCounter.ElapsedMilliseconds >= onset  )
+                    {
+                        //if the timer is outside the window, turn hazard to false
+                        preHazard = false;
+                        return preHazard;
+                    }
+            
+                    else if (hazard == true)
+                    {
+                        //if the timer is outside the window, turn hazard to false
+                        preHazard = false;
+                        return preHazard;
+                    }
+                    else
+                    {
+                        return preHazard;
+                    }
+                }
+            return preHazard;
         }
-        
-        else if (preHazard == true)
-        {
-            if (hazardTimeCounter.ElapsedMilliseconds >= offset)
-            {
-                //if the timer is outside the window, turn hazard to false
-                preHazard = false;
-                return preHazard;
-            }
-            else if (hazard == true)
-            {
-                //if the timer is outside the window, turn hazard to false
-                preHazard = false;
-                return preHazard;
-            }
-            else
-            {
-                return preHazard;
-            }
-        }
-        return preHazard;
-        }
+  
         else
         {
             preHazard = false;
             return preHazard;
         }
     }
+
+    
     // Function to check whether the Spawner should be active or not, as well as time windows for when hazard gems should spawn.
     public bool CheckSpawn()
     {

@@ -14,7 +14,7 @@ public class CorrectNumberChecker : MonoBehaviour
 {
 
     [SerializeField] public Stopwatch keypressCounter = new Stopwatch();
-    List<long> keyTimes = new List<long>();
+    List<string> keyTimes = new List<string>();
     public string targetNumber;
     public string userNumber;
     public int score = 0;
@@ -74,7 +74,7 @@ public class CorrectNumberChecker : MonoBehaviour
         if (userNumber == targetNumber)
         {
             score++;
-            keyTimes.Add(keypressTrialTime);
+            keyTimes.Add(keypressTrialTime.ToString());
             PlayCorrectAudio();
             generateRNG();
             sb.Clear();
@@ -98,14 +98,18 @@ public class CorrectNumberChecker : MonoBehaviour
     public void WriteString()
     {
 
-        string path = Application.persistentDataPath + "/" + "numbersDialled.txt";
+        string path = Application.persistentDataPath + "/" + condition + " - numbersDialled.txt";
 
         StreamWriter writer = new StreamWriter(path, false);
         writer.WriteLine(date);
         writer.WriteLine(condition);
         writer.WriteLine(scoreText.text);        
         writer.WriteLine("Keypresses: " + keypresses);
-        writer.WriteLine(keyTimes);        
+
+        writer.WriteLine(keyTimes);
+
+        for (int index = 0; index < keyTimes.Count; index++)
+        {writer.WriteLine(keyTimes[index]);}
 
 
         writer.Close();

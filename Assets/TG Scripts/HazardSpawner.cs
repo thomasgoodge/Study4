@@ -12,12 +12,14 @@ public class HazardSpawner : MonoBehaviour
     public Vector3 centralspawn;
     public Vector3 size;
     public GameObject gemPrefab;
+    public GameObject blockPrefab;
 
     // Create counters for time and number of gems, as well as initialising a respawn time
     public float hazardRespawnTime;
     public float hazardRespawnRate = 1.0f;
     private int gemCount;
     [SerializeField] public bool spawnerActive;
+    public bool spawned = false;
 
     public GameObject HazardOnsetManagerScript;
     public GameObject GetSpawnerLocationScript;
@@ -25,6 +27,7 @@ public class HazardSpawner : MonoBehaviour
     public string SpawnerLocation;
     public int selectSpawner;
 
+    public Vector3 spawnVector = new Vector3(0f, 0f, 0f);
     public Vector3 left = new Vector3(-0.25f,0f,0.8f);
     public Vector3 centreleft = new Vector3(-0.1f,0f,0.8f);
     public Vector3 centre = new Vector3(0f,0f,0.8f);
@@ -43,6 +46,7 @@ public class HazardSpawner : MonoBehaviour
         GameObject TopCentreAOI = GameObject.Find("AOI(TopCentre)");
         TopCentreAOITransform = TopCentreAOI.GetComponent<Transform>();
         float ZCoord = TopCentreAOITransform.position.z;
+        setSpawnerLocationCongruent();
 
         //define the vector co-ordinates for the spawner locations
         left = new Vector3(-0.25f,0f,ZCoord);
@@ -68,22 +72,23 @@ public class HazardSpawner : MonoBehaviour
         spawnerActive = CheckPreHazardStatus();
     
          //if the spawner is active from the HazardOnsetManager script
-        while (spawnerActive && gemCount <= 3)
+        if (spawnerActive && spawned == false)
             {  
-                StartCoroutine("CorSpawnHazardGem", 0.5f);     
-                gemCount++;                                 
+                StartCoroutine("CorSpawnHazardGem", 0.5f); 
+                spawned = true;    
             }
 
-        if (!spawnerActive)
+        if (!spawnerActive && spawned == true)
             {
                 StopCoroutine("CorSpawnHazardGem");
-                gemCount = 0;
+                spawned = false;
             }
+        setSpawnerLocationCongruent();
         //Select which spawner to use
-        if (condition == "GemsCued"|| condition == "AHTest")
-            {
-                setSpawnerLocationCongruent();
-            }
+        //if (condition == "GemsCued"|| condition == "AHTest")
+           // {
+            //    setSpawnerLocationCongruent();
+           // }
             /*
         else if (condition == "GemsFocusedIncongruent")
             {
@@ -107,12 +112,26 @@ public class HazardSpawner : MonoBehaviour
         GameObject alpha = Instantiate(gemPrefab, pos, Quaternion.identity);
         gemCount++;
         yield return new WaitForSeconds(0.5f);
+    }
+            
+            
+      
+        //yield return new WaitForSeconds(1.0f);
+
+        IEnumerator CorSpawnHazardBlock()
+    {
+          
+        // if there are less than 3 gems, spawn a gem in the range of the spawner
+        Vector3 pos = centralspawn;;
+        GameObject alpha = Instantiate(blockPrefab, pos, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
             
             
       
         //yield return new WaitForSeconds(1.0f);
                
-    }
+    }     
+    
 
     public void setSpawnerLocationCongruent()
     {

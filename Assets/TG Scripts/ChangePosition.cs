@@ -10,8 +10,13 @@ private Vector3 startLocation;
 
 private Vector3 addXCoords = new Vector3 (0.1f, 0f, 0f);
 private Vector3 addYCoords = new Vector3 (0f, 0.1f, 0f);
-private Vector3 addDoubleXCoords = new Vector3 (0.15f, 0f, 0f);
+private Vector3 addDoubleXCoords = new Vector3 (0.12f, 0f, 0f);
 private Vector3 addDoubleYCoords = new Vector3 (0f, 0.15f, 0f);
+
+private Vector3 hazardPositionMidKeys = new Vector3(-1f, 0f, 0f);
+private Vector3 hazardPositionLeftKeys = new Vector3(1f, 0f, 0f);
+private Vector3 hazardPositionRightKeys = new Vector3(-1.5f, 0f, 0f);
+
 
 private Vector3 subtractCoords = new Vector3 (-0.1f, -0.1f, 0f);
 private Vector3 newLocation;
@@ -74,25 +79,28 @@ public GameObject HazardOnsetManagerScript;
 
     void ChangeObjectPosition()
     {
-        if (canStayHere == false)
+        if (preHazardActive == true )
         {  
             if (gameObject.name == "1Key"|| gameObject.name == "4Key" || gameObject.name == "7Key" || gameObject.name == "EnterKey")     
             { 
-            newLocation = transform.position - addYCoords - addXCoords;
+            newLocation = transform.position - addXCoords;
+            //newLocation = hazardPositionLeftKeys;
             transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
             }
             else if (gameObject.name == "2Key"|| gameObject.name == "5Key" || gameObject.name == "8Key" || gameObject.name == "0Key")     
             { 
-            newLocation = transform.position + addYCoords + addXCoords;
+            newLocation = transform.position + addXCoords;
+            //newLocation = hazardPositionMidKeys;
             transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
             }
             else 
             {
-            newLocation = transform.position + addDoubleYCoords + addDoubleXCoords;
+            newLocation = transform.position + addDoubleXCoords;
+            //newLocation = hazardPositionRightKeys;
             transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
             }
         }
-        else if (canStayHere == true)
+        if (hazardActive == false)
         {
            transform.position = transform.position;
         }

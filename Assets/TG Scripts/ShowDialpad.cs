@@ -20,10 +20,8 @@ public class ShowDialpad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("Check");
+       
         showKeypad = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().stopwatchRunning;
-        print(showKeypad);
-        print(HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().stopwatchRunning);
         if (showKeypad == true)
         {
             Keypad.SetActive(true);

@@ -481,11 +481,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 249030569032620553, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
   m_PrefabInstance: {fileID: 5636870078410970958}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &541983695
+--- !u!114 &541983695 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 541983695, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
+  m_PrefabInstance: {fileID: 5636870078410970958}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541983694}
   m_Enabled: 1
@@ -1216,6 +1215,10 @@ PrefabInstance:
       propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7088263337610214417, guid: 13eed189df507494eac2f425ba3c3d6c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7088263337610214431, guid: 13eed189df507494eac2f425ba3c3d6c, type: 3}
       propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -1270,14 +1273,6 @@ PrefabInstance:
       value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.00022353588
-      objectReference: {fileID: 0}
-    - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0004479597
-      objectReference: {fileID: 0}
-    - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1307,11 +1302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.17
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.13
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 29354186749307317, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1325,61 +1320,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 207908257498073943, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 249030569032620553, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
       propertyPath: m_Name
       value: TG Static Dialpad
       objectReference: {fileID: 0}
-    - target: {fileID: 2473126893777531175, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894144847772, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894378408537, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894573265092, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894614046658, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126894893654766, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2473126895826423020, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249079550825177821, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249079551215111140, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249079552189762442, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6379094531241784787, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-      propertyPath: targetCamera
-      value: 
-      objectReference: {fileID: 1524566498}
-    m_RemovedComponents:
-    - {fileID: 6379094531241784787, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
-    - {fileID: 2124816738, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d8697938ea9b84696a0d60a6c58c13, type: 3}
 --- !u!114 &5636870078410970959 stripped
 MonoBehaviour:
