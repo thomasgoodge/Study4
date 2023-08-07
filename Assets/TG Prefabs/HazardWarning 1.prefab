@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 8228996411556349072}
   - component: {fileID: 8228996411556349073}
   - component: {fileID: 8228996411556349085}
-  - component: {fileID: 8228996411556349086}
-  - component: {fileID: 8228996411556349087}
+  - component: {fileID: 1537605836}
   m_Layer: 0
   m_Name: HazardWarning 1
   m_TagString: Untagged
@@ -50,7 +49,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ac1b1a4a205e9c64d8c37c5241cbb796, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b6fe2d00afc0d8b4d91b386a3c9b0c97, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -149,13 +148,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8228996411556349073}
-  clip: {fileID: 8300000, guid: ac1b1a4a205e9c64d8c37c5241cbb796, type: 3}
+  clip: {fileID: 8300000, guid: b6fe2d00afc0d8b4d91b386a3c9b0c97, type: 3}
   volume: 0.5
   played: 0
   hazardStatus: 0
   warningImage: {fileID: 8228996411656286850}
-  HazardOnsetManagerScript: {fileID: 8228996411556349074}
---- !u!114 &8228996411556349086
+  HazardOnsetManagerScript: {fileID: 0}
+--- !u!114 &1537605836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,55 +163,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8228996411556349074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe471419f6fbad46bb43a6cf15458fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 10dcfde7b47566e43a021ae3e2dfb9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: 0
-  currentState: 0
-  HazardSpawnerScript: {fileID: 8228996411556349074}
-  HazardListScript: {fileID: 0}
-  FileReaderScript: {fileID: 0}
-  ReceiveUDPScript: {fileID: 0}
-  PauseScript: {fileID: 0}
-  clipName: 
-  hazardLocation: 0
-  onset: 0
-  offset: 0
-  length: 0
-  clipRef: 0
-  stopwatchRunning: 0
-  currentClip: 
-  timer: 0
-  isPaused: 0
---- !u!114 &8228996411556349087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8228996411556349074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e0166a501cf2a44a2512bc549c9dbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centralspawn: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  gemPrefab: {fileID: 0}
-  hazardRespawnTime: 0
-  hazardRespawnRate: 1
-  spawnerActive: 0
-  HazardOnsetManagerScript: {fileID: 8228996411556349074}
-  GetSpawnerLocationScript: {fileID: 0}
-  SpawnerLocation: 
-  selectSpawner: 0
-  left: {x: -0.25, y: 0, z: 0.8}
-  centreleft: {x: -0.1, y: 0, z: 0.8}
-  centre: {x: 0, y: 0, z: 0.8}
-  centreright: {x: 0.1, y: 0, z: 0.8}
-  right: {x: 0.25, y: 0, z: 0.8}
-  condition: 
-  TopCentreAOI: {fileID: 0}
+  Keypad: {fileID: 0}
+  HazardOnsetManagerScript: {fileID: 0}
+  showKeypad: 0
 --- !u!1 &8228996411656286852
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113, y: -48.9}
+  m_AnchoredPosition: {x: 146.2, y: -73.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8228996411656286849
@@ -337,7 +293,7 @@ Canvas:
   m_GameObject: {fileID: 8228996412995690960}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

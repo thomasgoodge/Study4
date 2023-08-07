@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2962461220379167296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2962461220379167311}
+  m_Layer: 0
+  m_Name: HazardSpawners 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2962461220379167311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962461220379167296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35055187, y: 0.2807333, z: -0.015890837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6657347982021812266}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6657347982021812267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6657347982021812266}
+  - component: {fileID: 6657347982021812262}
+  - component: {fileID: 6657347982021812263}
+  - component: {fileID: 6657347982021812264}
+  - component: {fileID: 6657347982021812265}
+  m_Layer: 0
+  m_Name: HazardSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6657347982021812266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657347982021812267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2962461220379167311}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6657347982021812262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657347982021812267}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811aee4ac7d7ba640bf5ba79f3359150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centre: {x: -0.06, y: 0.07, z: 0.44}
+  size: {x: 0.1, y: 0.1, z: 0.01}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  itemPrefab: {fileID: 5794192932445197293, guid: 6e9f4d505856b98439561332654b0c0f, type: 3}
+  respawnRate: 1
+  respawnTime: 0
+  counter: 0
+  ObjectList: []
+  ObjectListLength: 0
+  LeftPillar: {fileID: 0}
+  RightPillar: {fileID: 0}
+  TopCentreAOI: {fileID: 0}
+--- !u!114 &6657347982021812263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657347982021812267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e0166a501cf2a44a2512bc549c9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centralspawn: {x: 0, y: 0, z: 0}
+  size: {x: 0, y: 0, z: 0}
+  gemPrefab: {fileID: 5794192932445197293, guid: 6e9f4d505856b98439561332654b0c0f, type: 3}
+  blockPrefab: {fileID: 5794192932445197293, guid: 6e9f4d505856b98439561332654b0c0f, type: 3}
+  hazardRespawnTime: 0
+  hazardRespawnRate: 1
+  spawnerActive: 0
+  spawned: 0
+  HazardOnsetManagerScript: {fileID: 6657347982021812267}
+  GetSpawnerLocationScript: {fileID: 6657347982021812267}
+  SpawnerLocation: 
+  selectSpawner: 0
+  spawnVector: {x: 0, y: 0, z: 0}
+  left: {x: -0.2, y: 0.06, z: 3}
+  centreleft: {x: -0.1, y: 0.06, z: 3}
+  centre: {x: 0, y: 0.06, z: 3}
+  centreright: {x: 0.1, y: 0.06, z: 3}
+  right: {x: 0.2, y: 0.06, z: 3}
+  condition: 
+  TopCentreAOI: {fileID: 0}
+--- !u!114 &6657347982021812264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657347982021812267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe471419f6fbad46bb43a6cf15458fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazard: 0
+  preHazard: 0
+  currentState: 0
+  HazardSpawnerScript: {fileID: 6657347982021812267}
+  HazardListScript: {fileID: 0}
+  FileReaderScript: {fileID: 0}
+  ReceiveUDPScript: {fileID: 0}
+  PauseScript: {fileID: 0}
+  clipName: 
+  hazardLocation: 0
+  onset: 0
+  offset: 0
+  length: 0
+  clipRef: 0
+  stopwatchRunning: 0
+  currentClip: 
+  timer: 0
+  isPaused: 0
+--- !u!114 &6657347982021812265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657347982021812267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e07ffe3c4e2c98469023a2f2ab809b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnerLocationTag: 
+  SpawnerLocation: 
+  spawner: {fileID: 6657347982021812267}
+  left: -0.66
+  centreleft: -0.33
+  centre: 0
+  centreright: 0.33
+  right: 0.66
