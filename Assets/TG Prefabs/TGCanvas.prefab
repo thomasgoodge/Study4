@@ -11085,12 +11085,20 @@ MonoBehaviour:
   targetNumber: 
   userNumber: 
   score: 0
+  keypresses: 0
+  keypressTrialTime: 0
+  keyStopwatchRunning: 0
+  condition: 
   newNumber: 
   dialText: {fileID: 6756374161925494804}
   numCode: 07
   randomNum: 0
   displayText: {fileID: 7081094057755590772}
   scoreText: {fileID: 61871210}
+  audioSource: {fileID: 0}
+  clip: {fileID: 0}
+  volume: 0.5
+  date: 
 --- !u!1 &1529620266
 GameObject:
   m_ObjectHideFlags: 0
@@ -14014,7 +14022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.017866552}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2359113711021182118
@@ -14264,7 +14272,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2359095824480728558
 MonoBehaviour:
   m_ObjectHideFlags: 0

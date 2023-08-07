@@ -7,9 +7,9 @@ public class ChangeColour : MonoBehaviour
 
     private Material keyMaterial; 
     public Color currentColor;
-    public Color baseColour = new Color (1f, 1f, 1f, 80f);
-    public Color amberColour = new Color (255f, 120f, 0f, 80f);
-    public Color redColour = new Color (255f, 0f, 0f, 80f);
+    public Color baseColour = new Color (1f, 1f, 1f, 0f);
+    public Color amberColour = new Color (255f, 120f, 0f, 0f);
+    public Color redColour = new Color (255f, 0f, 0f, 0f);
 
     public bool preHazardActive;
     public bool hazardActive;
