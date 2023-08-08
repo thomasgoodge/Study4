@@ -991,13 +991,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 762851347, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 762851347, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
     - target: {fileID: 1644323357, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644323357, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 323025620538341626, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 323025620538341626, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
@@ -1007,9 +1019,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 830628499095700996}
     - target: {fileID: 538301565327267862, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 538301565327267862, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 1025981497285772563, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1025981497285772563, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
@@ -1018,6 +1038,10 @@ PrefabInstance:
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 1138317385529545303, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1138317385529545303, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
@@ -1035,9 +1059,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 830628499095700996}
     - target: {fileID: 1987544407505026543, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987544407505026543, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 2076285961166920552, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2076285961166920552, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
@@ -1059,9 +1091,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 830628499095700996}
     - target: {fileID: 4080752968113091357, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080752968113091357, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 4133767872407682603, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4133767872407682603, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
@@ -1070,6 +1110,10 @@ PrefabInstance:
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 5362941420630937981, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5362941420630937981, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
@@ -1170,6 +1214,10 @@ PrefabInstance:
       propertyPath: HazardOnsetManagerScript
       value: 
       objectReference: {fileID: 830628499095700996}
+    - target: {fileID: 7827707462696032431, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
+      propertyPath: baseColour.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7827707462696032431, guid: 071658b48a26dae40939c82cd43b8814, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 
