@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using TMPro;
 using System.IO;
 
 
@@ -19,6 +20,7 @@ public class CorrectNumberChecker : MonoBehaviour
     public string userNumber;
     public int score = 0;
     public int keypresses = 0;
+    public int errors = 0;
     public long keypressTrialTime;
     public bool keyStopwatchRunning = false;
 
@@ -27,13 +29,16 @@ public class CorrectNumberChecker : MonoBehaviour
     public string newNumber;
 
     public Text dialText;
+    public TextMeshPro dialTextTMP;
     public StringBuilder sb = new StringBuilder();
 
     public string numCode = "07";
     public int randomNum;
 
     public Text displayText;
+    public TextMeshPro displayTextTMP;
     public Text scoreText;
+    public TextMeshPro scoreTextTMP;
 
     public AudioSource audioSource;
     public AudioClip clip;
@@ -57,7 +62,9 @@ public class CorrectNumberChecker : MonoBehaviour
     {       
         userNumber = sb.ToString();
         dialText.text = userNumber;
+        dialTextTMP.text = userNumber;
         scoreText.text = "Numbers dialled: " + score.ToString();
+        scoreTextTMP.text = "Correct: " + score.ToString();
         keypressTrialTime = keypressCounter.ElapsedMilliseconds;
         WriteString();
         
@@ -92,6 +99,7 @@ public class CorrectNumberChecker : MonoBehaviour
         randomNum = Random.Range(111111111, 999999999);
         targetNumber = numCode + randomNum.ToString();
         displayText.text = "Number to call: " + targetNumber;
+        displayTextTMP.text = "Number to call: " + targetNumber;
 
     }
     
@@ -105,6 +113,7 @@ public class CorrectNumberChecker : MonoBehaviour
         writer.WriteLine(condition);
         writer.WriteLine(scoreText.text);        
         writer.WriteLine("Keypresses: " + keypresses);
+        writer.WriteLine("Errors: " + errors);
 
         writer.WriteLine(keyTimes);
 
@@ -217,6 +226,7 @@ public void dialOne(string numberInput)
         {
         //numberInput.Substring(0, numberInput.Length-1);
         keypresses++;
+        errors++;
         sb.Remove(sb.Length - 1, 1);
         }
     }

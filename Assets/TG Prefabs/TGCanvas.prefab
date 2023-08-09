@@ -11086,6 +11086,7 @@ MonoBehaviour:
   userNumber: 
   score: 0
   keypresses: 0
+  errors: 0
   keypressTrialTime: 0
   keyStopwatchRunning: 0
   condition: 
@@ -14272,7 +14273,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2359095824480728558
 MonoBehaviour:
   m_ObjectHideFlags: 0

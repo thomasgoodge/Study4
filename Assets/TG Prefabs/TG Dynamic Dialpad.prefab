@@ -625,6 +625,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &173670459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2674,6 +2675,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &102477776
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3349,6 +3351,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &958520018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4963,6 +4966,7 @@ GameObject:
   - component: {fileID: 6353790679199905702}
   - component: {fileID: 9158025372456989976}
   - component: {fileID: 1978158571}
+  - component: {fileID: 4816312386029914864}
   m_Layer: 5
   m_Name: TG Dynamic Dialpad
   m_TagString: Untagged
@@ -5103,6 +5107,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b140b080fe20c9b48b665d26a767959f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4816312386029914864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465937740989500938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a3028fdce6bc046ae212d6606f5253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7742091776913013256
@@ -6007,6 +6023,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &1629459516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7570,6 +7587,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &1767652603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8918,6 +8936,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &1970017671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9911,6 +9930,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &1716225479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10917,6 +10937,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &726364787
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12110,6 +12131,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &960301587
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13940,6 +13962,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &235060359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14764,6 +14787,7 @@ MonoBehaviour:
   userNumber: 
   score: 0
   keypresses: 0
+  errors: 0
   keypressTrialTime: 0
   keyStopwatchRunning: 0
   condition: 
@@ -16783,6 +16807,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &149749245
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17969,6 +17994,7 @@ MonoBehaviour:
   hazardActive: 0
   preHazardActive: 0
   HazardOnsetManagerScript: {fileID: 0}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!54 &319010702
 Rigidbody:
   m_ObjectHideFlags: 0
