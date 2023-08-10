@@ -13,10 +13,11 @@ public class ChangeColour : MonoBehaviour
 
     public bool preHazardActive;
     public bool hazardActive;
-
+    public bool canStayHerePosition;
     public float speed = 0.5f;
 
     public GameObject HazardOnsetManagerScript;
+    public GameObject ChangePositionScript;
     
    
 
@@ -32,6 +33,7 @@ public class ChangeColour : MonoBehaviour
     {
         preHazardActive =  HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().preHazard;
         hazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard;
+        canStayHerePosition = ChangePositionScript.GetComponent<ChangePosition>().canStayHere;
         /*if (Input.GetKey("o"))
         {
         StartCoroutine(SetColourToAmber());
@@ -45,20 +47,42 @@ public class ChangeColour : MonoBehaviour
         StartCoroutine(SetColourToBase());
         }
         */
-
-        if (preHazardActive== true && hazardActive == false) 
+    if (canStayHerePosition == false)
             {
-               StartCoroutine(SetColourToAmber());
+                if (preHazardActive== true && hazardActive == false) 
+                    {
+                        StartCoroutine(SetColourToAmber());
+                    }
+                    
+            else if (hazardActive == true && preHazardActive == false) 
+                    {
+                        StartCoroutine(SetColourToRed());
+                    }
+                else if (hazardActive == false && preHazardActive == false)
+                    {
+                        StartCoroutine(SetColourToBase());
+                    }
+                else
+                    {
+                        StartCoroutine(SetColourToBase());
+                    }
             }
-       else if (hazardActive == true && preHazardActive == false) 
-            {
-                StartCoroutine(SetColourToRed());
-            }
-        else if (hazardActive == false && preHazardActive == false)
-            {
-                StartCoroutine(SetColourToBase());
-            }
+    else if (canStayHerePosition == true)
+    {
+        if (hazardActive == true && preHazardActive == false)
+        {
+            StartCoroutine(SetColourToRed());
+        }
+        else if (hazardActive == false && preHazardActive == true) 
+        {
+            StartCoroutine(SetColourToAmber());
+        }
         else
+        {
+           StartCoroutine(SetColourToBase()); 
+        }
+    }
+    else
         {
             StartCoroutine(SetColourToBase());
         }

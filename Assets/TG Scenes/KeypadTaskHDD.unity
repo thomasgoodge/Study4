@@ -609,6 +609,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &810291240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 677970252198089388, guid: d343b24c00313744d8662832a92ed21d, type: 3}
+  m_PrefabInstance: {fileID: 6226099343797651596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887069989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TG Static  HDD Dialpad
       objectReference: {fileID: 0}
+    - target: {fileID: 677970252198089391, guid: d343b24c00313744d8662832a92ed21d, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 1524566498}
     - target: {fileID: 753315942128640272, guid: d343b24c00313744d8662832a92ed21d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1410,7 +1419,7 @@ PrefabInstance:
     - target: {fileID: 1537605836, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
       propertyPath: Keypad
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 810291240}
     - target: {fileID: 1537605836, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
       propertyPath: HazardOnsetManagerScript
       value: 

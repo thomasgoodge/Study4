@@ -78,7 +78,7 @@ public class HazardOnsetManager : MonoBehaviour
                 CheckClip();
                 if (currentClip != "") 
                     {
-                        //ResumeGame();
+                        ResumeGame();
                     }
               
             }
