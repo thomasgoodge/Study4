@@ -230,6 +230,17 @@ public void dialOne(string numberInput)
         sb.Remove(sb.Length - 1, 1);
         }
     }
+
+    public void clearAllNumbers(string numberInput)
+    {
+        if (sb.Length > 0)
+        {
+        //numberInput.Substring(0, numberInput.Length-1);
+        keypresses++;
+        errors++;
+        sb.Length = 0;
+        }
+    }
     public void KeyStopwatchStart()
     {  //Function to start the stopwatch when the button is pressed
        keypressCounter.Start();

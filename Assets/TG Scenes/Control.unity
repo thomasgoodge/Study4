@@ -1456,9 +1456,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8228996411556349073, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8228996411556349074, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
       propertyPath: m_Name
       value: HazardWarning
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228996411556349085, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228996411556349085, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
+      propertyPath: audioSource
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8228996411556349086, guid: d1a782cb31c448448ba073b6261df7b6, type: 3}
       propertyPath: PauseScript
