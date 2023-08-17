@@ -8,6 +8,7 @@ public class HazardOnsetManager : MonoBehaviour
     // Create counters for time and number of gems, as well as initialising a respawn time
     public bool hazard;
     public bool preHazard;
+    public bool redHazard;
     public bool currentState;
 
     [SerializeField] public Stopwatch hazardTimeCounter = new Stopwatch();
@@ -42,8 +43,10 @@ public class HazardOnsetManager : MonoBehaviour
         stopwatchRunning = false;
         currentState = false;
         hazard = false;
+        redHazard = false;
         preHazard = false;
         isPaused = false;
+        hazardLocation = 0;
 
     }
     // Update is called once per frame
@@ -52,8 +55,10 @@ public class HazardOnsetManager : MonoBehaviour
         timer = hazardTimeCounter.ElapsedMilliseconds;
         hazard = CheckHazard();
         preHazard = CheckPreHazard();
+        redHazard = CheckRedHazard();
         currentState = CheckSpawn();  
-        currentClip = GetCurrentClip();      
+        currentClip = GetCurrentClip();    
+        hazardLocation = GetHazardLocation();  
 
 //Hazard perception
 /*
@@ -132,6 +137,34 @@ public class HazardOnsetManager : MonoBehaviour
         }
         return hazard;
     }
+
+    public bool CheckRedHazard()
+    {
+        //function that checks whether the hazard is active or not.
+        if (hazard == false)
+        {
+            if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset - 1000)
+            {
+                // if hazard is false and the time is during the window, change to true
+                redHazard = true;
+                return redHazard;
+            }
+
+            else
+            {
+                redHazard = false;
+                return hazard;
+            }
+        
+        }
+        
+        else if (hazard == true)
+        {
+                redHazard = false;
+                return redHazard;
+        }
+        return redHazard;
+    }
     public bool CheckPreHazard()
     {
         if (hazard == false)
@@ -141,13 +174,13 @@ public class HazardOnsetManager : MonoBehaviour
                 if (preHazard == false)
                 {
                    
-                    if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset - 4000 )
+                    if (stopwatchRunning == true && hazardTimeCounter.ElapsedMilliseconds >= onset - 4000 && redHazard == false )
                      {
                         // if hazard is false and the time is during the window, change to true
                         preHazard = true;
                         return preHazard;
                     }
-                    else if (hazard == true)
+                    else if (redHazard == true)
                     {
                         preHazard = false;
                         return preHazard;
@@ -163,14 +196,14 @@ public class HazardOnsetManager : MonoBehaviour
             
             else if (preHazard == true)
                 {   
-                    if (hazardTimeCounter.ElapsedMilliseconds >= onset  )
+                    if (hazardTimeCounter.ElapsedMilliseconds >= onset -1000)
                     {
                         //if the timer is outside the window, turn hazard to false
                         preHazard = false;
                         return preHazard;
                     }
             
-                    else if (hazard == true)
+                    else if (redHazard == true)
                     {
                         //if the timer is outside the window, turn hazard to false
                         preHazard = false;

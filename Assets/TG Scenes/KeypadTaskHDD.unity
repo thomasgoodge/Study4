@@ -1496,7 +1496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904353844703004207, guid: d343b24c00313744d8662832a92ed21d, type: 3}
       propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2904353844703004207, guid: d343b24c00313744d8662832a92ed21d, type: 3}
       propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[2].m_Mode

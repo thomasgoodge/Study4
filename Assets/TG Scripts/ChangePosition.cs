@@ -16,6 +16,7 @@ private Vector3 addDoubleYCoords = new Vector3 (0f, 0.15f, 0f);
 private Vector3 hazardPositionMidKeys = new Vector3(-1f, 0f, 0f);
 private Vector3 hazardPositionLeftKeys = new Vector3(1f, 0f, 0f);
 private Vector3 hazardPositionRightKeys = new Vector3(-1.5f, 0f, 0f);
+private Vector3 objectLocation;
 
 
 private Vector3 subtractCoords = new Vector3 (-0.1f, -0.1f, 0f);
@@ -30,6 +31,8 @@ public bool preHazardActive = false;
 public GameObject HazardOnsetManagerScript;
 public GameObject ScreenCalibrationCube;
 
+private int moveLocation;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -43,7 +46,8 @@ public GameObject ScreenCalibrationCube;
     void Update()
     {
         preHazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().preHazard;
-        hazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard;
+        hazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().redHazard;
+        moveLocation = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazardLocation;
         ChangeObjectPosition();
         if (hazardActive == false && preHazardActive == false)
         {
@@ -67,7 +71,8 @@ public GameObject ScreenCalibrationCube;
     {
         if (collision.gameObject.tag == "Hazard")// ||) collision.gameObject.tag == "Button" )
         {
-            canStayHere = true;            
+            canStayHere = true;    
+            objectLocation = collision.gameObject.transform.position;        
         }
         if (collision.gameObject.tag == "Button")// ||) collision.gameObject.tag == "Button" )
         {
@@ -95,9 +100,24 @@ public GameObject ScreenCalibrationCube;
             }
             else if (gameObject.name == "2Key"|| gameObject.name == "5Key" || gameObject.name == "8Key" || gameObject.name == "0Key")     
             { 
-            newLocation = transform.position + addXCoords;
-            //newLocation = hazardPositionMidKeys;
-            transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
+                if (moveLocation <= 3)
+                {
+                    newLocation = transform.position + addXCoords;
+                    //newLocation = hazardPositionMidKeys;
+                    transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
+                }
+                else if (moveLocation < 3)
+                {
+                    newLocation = transform.position - addXCoords;
+                    //newLocation = hazardPositionMidKeys;
+                    transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
+                }
+                else
+                {
+                     newLocation = transform.position - addXCoords;
+                    //newLocation = hazardPositionMidKeys;
+                    transform.position = Vector3.SmoothDamp(transform.position, newLocation, ref velocity, smoothTime);
+                }
             }
             else if (gameObject.name == "3Key"|| gameObject.name == "6Key" )
             {
@@ -122,6 +142,7 @@ public GameObject ScreenCalibrationCube;
         }
         
     }   
+
 
     void ReturnToPosition()
     {

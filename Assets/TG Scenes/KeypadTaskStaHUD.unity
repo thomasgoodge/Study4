@@ -1373,6 +1373,10 @@ PrefabInstance:
       value: PlayOneShot
       objectReference: {fileID: 0}
     - target: {fileID: 6079830076744335733, guid: aa59813295e3de149b162e7bfa30dee9, type: 3}
+      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: dialKeyName
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079830076744335733, guid: aa59813295e3de149b162e7bfa30dee9, type: 3}
       propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
@@ -1494,7 +1498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6079830077245206331, guid: aa59813295e3de149b162e7bfa30dee9, type: 3}
       propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6079830077245206331, guid: aa59813295e3de149b162e7bfa30dee9, type: 3}
       propertyPath: TouchBegin.m_PersistentCalls.m_Calls.Array.data[2].m_Mode

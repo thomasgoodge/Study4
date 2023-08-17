@@ -13,6 +13,7 @@ public class ChangeColour : MonoBehaviour
 
     public bool preHazardActive;
     public bool hazardActive;
+    public bool redHazardActive;
     public bool canStayHerePosition;
     public float speed = 0.5f;
 
@@ -33,6 +34,7 @@ public class ChangeColour : MonoBehaviour
     {
         preHazardActive =  HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().preHazard;
         hazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().hazard;
+        redHazardActive = HazardOnsetManagerScript.GetComponent<HazardOnsetManager>().redHazard;
         canStayHerePosition = ChangePositionScript.GetComponent<ChangePosition>().canStayHere;
         /*if (Input.GetKey("o"))
         {
@@ -49,16 +51,16 @@ public class ChangeColour : MonoBehaviour
         */
     if (canStayHerePosition == false)
             {
-                if (preHazardActive== true && hazardActive == false) 
+                if (preHazardActive== true && redHazardActive == false) 
                     {
                         StartCoroutine(SetColourToAmber());
                     }
                     
-            else if (hazardActive == true && preHazardActive == false) 
+            else if (redHazardActive == true && preHazardActive == false) 
                     {
                         StartCoroutine(SetColourToRed());
                     }
-                else if (hazardActive == false && preHazardActive == false)
+                else if (redHazardActive == false && preHazardActive == false)
                     {
                         StartCoroutine(SetColourToBase());
                     }
@@ -69,11 +71,11 @@ public class ChangeColour : MonoBehaviour
             }
     else if (canStayHerePosition == true)
     {
-        if (hazardActive == true && preHazardActive == false)
+        if (redHazardActive == true && preHazardActive == false )
         {
-            StartCoroutine(SetColourToRed());
+            StartCoroutine(SetColourToRed());   
         }
-        else if (hazardActive == false && preHazardActive == true) 
+        else if (redHazardActive == false && preHazardActive == true ) 
         {
             StartCoroutine(SetColourToAmber());
         }
