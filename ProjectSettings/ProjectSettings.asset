@@ -259,6 +259,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -1758817722867131590, guid: a096f7980e4582b49b04753469e447cc, type: 2}
   - {fileID: -3676291922380595538, guid: 19637e978bb5e5c43864d28ef364043f, type: 2}
   - {fileID: -8590862398491213082, guid: 4466761e23691764ea0ec13e65c702a1, type: 2}
@@ -741,11 +743,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: TGStudy4
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: DefaultCompany
-  metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 0072af9ac0cfd901
+  metroCertificateSubject: TGoodgeAR
+  metroCertificateIssuer: TGoodgeAR
+  metroCertificateNotAfter: 0087db729df1da01
   metroApplicationDescription: TG Study 4
   wsaImages: {}
   metroTileShortName: TGStudy2

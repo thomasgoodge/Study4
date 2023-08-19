@@ -53,7 +53,7 @@ public class ChangeColour : MonoBehaviour
             {
                 if (preHazardActive== true && redHazardActive == false) 
                     {
-                        StartCoroutine(SetColourToAmber());
+                        StartCoroutine(SetColourToRed());
                     }
                     
             else if (redHazardActive == true && preHazardActive == false) 
@@ -77,7 +77,7 @@ public class ChangeColour : MonoBehaviour
         }
         else if (redHazardActive == false && preHazardActive == true ) 
         {
-            StartCoroutine(SetColourToAmber());
+            StartCoroutine(SetColourToRed());   
         }
         else
         {
