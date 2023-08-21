@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5794192932445197282}
   - component: {fileID: 1344775768}
   - component: {fileID: 2980944187638340234}
+  - component: {fileID: -6170524890985422401}
   m_Layer: 0
   m_Name: HazardObject
   m_TagString: Hazard
@@ -126,3 +127,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 4000
+--- !u!114 &-6170524890985422401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5794192932445197293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400193dcb3f1cb7428f321aa192f7d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 0}

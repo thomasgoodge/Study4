@@ -34,7 +34,7 @@ public GameObject ScreenCalibrationCube;
 private int moveLocation;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
        startLocation = transform.position;    
         
@@ -83,7 +83,7 @@ private int moveLocation;
 
     void ChangeObjectPosition()
     {
-        if (canStayHere == false )
+        if (canStayHere == false)
         {  
             if (gameObject.name == "1Key"|| gameObject.name == "4Key" )     
             { 
@@ -133,7 +133,7 @@ private int moveLocation;
             }
             else
             {
-                transform.position = transform.position;
+                startLocation = transform.position;
             }
         }
         if (hazardActive == false)

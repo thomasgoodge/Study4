@@ -23,6 +23,7 @@ public class HazardSpawner : MonoBehaviour
 
     public GameObject HazardOnsetManagerScript;
     public GameObject GetSpawnerLocationScript;
+    public GameObject TopCentreAOI;
 
     public string SpawnerLocation;
     public int selectSpawner;
@@ -35,7 +36,6 @@ public class HazardSpawner : MonoBehaviour
     public Vector3 right = new Vector3(0.25f,0f,0.8f);
     public string condition;
     
-    public GameObject TopCentreAOI;
     Transform TopCentreAOITransform;
 
     
@@ -43,20 +43,22 @@ public class HazardSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject TopCentreAOI = GameObject.Find("AOI(TopCentre)");
+        GameObject TopCentreAOI = GameObject.Find("AOI(BottomCentre)");
         TopCentreAOITransform = TopCentreAOI.GetComponent<Transform>();
+        float XCoord = TopCentreAOITransform.position.x;
+        float YCoord = TopCentreAOITransform.position.y;
         float ZCoord = TopCentreAOITransform.position.z;
         setSpawnerLocationCongruent();
 
         //define the vector co-ordinates for the spawner locations
-        left = new Vector3(-0.25f,0f,ZCoord);
-        centreleft = new Vector3(-0.1f,0f,ZCoord);
-        centre = new Vector3(0f,0f,ZCoord);
-        centreright =new Vector3(0.1f,0f,ZCoord);
-        right = new Vector3(0.25f,0f,ZCoord);
+        left = new Vector3((XCoord-0.25f),(YCoord + 0f),ZCoord);
+        centreleft = new Vector3((XCoord-0.1f),(YCoord + 0f),ZCoord);
+        centre = new Vector3(XCoord,YCoord,ZCoord);
+        centreright =new Vector3((XCoord + 0.1f),(YCoord + 0f),ZCoord);
+        right = new Vector3((XCoord + 0.25f),(YCoord + 0f) ,ZCoord);
         spawnerActive = false;
         gemCount = 0;     
-        centralspawn = new Vector3(0f, 0f, ZCoord); 
+        centralspawn = new Vector3(XCoord, YCoord, ZCoord); 
         condition = SceneManager.GetActiveScene().name;
     }
 

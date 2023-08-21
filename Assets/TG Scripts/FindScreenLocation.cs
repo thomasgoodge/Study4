@@ -8,12 +8,12 @@ public class FindScreenLocation : MonoBehaviour
 
     public GameObject ScreenCalibrationCube;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        ScreenCalibrationCube = GameObject.Find("ScreenCalibrationCube");
+        ScreenCalibrationCube = GameObject.Find("/MainManager/ScreenCalibrationCube");
         if (ScreenCalibrationCube != null)
         {
-            transform.position = ScreenCalibrationCube.transform.position;
+            transform.position = ScreenCalibrationCube.transform.position + new Vector3(0f, 0.03f,0f);
         }
         else
         {

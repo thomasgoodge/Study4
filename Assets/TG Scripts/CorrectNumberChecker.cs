@@ -51,6 +51,7 @@ public class CorrectNumberChecker : MonoBehaviour
     void Start()
     {
       generateRNG();
+      CheckDate();
       KeyStopwatchStart();
       condition = SceneManager.GetActiveScene().name;
 

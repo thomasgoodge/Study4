@@ -219,6 +219,29 @@ Transform:
   m_Father: {fileID: 1422348526}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &137022707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8580922436863018896, guid: 24161ee60e544a7408e29cc06f1659c3, type: 3}
+  m_PrefabInstance: {fileID: 8580922437436809776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &137022709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137022707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 2
+  canStayHere: 1
+  hazardActive: 0
+  preHazardActive: 0
+  HazardOnsetManagerScript: {fileID: 830628499095700996}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!1001 &273420753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,6 +680,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8943c38b10fece4fbace4dfc9cbd565, type: 3}
+--- !u!1 &1137043063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8580922436380723852, guid: 24161ee60e544a7408e29cc06f1659c3, type: 3}
+  m_PrefabInstance: {fileID: 8580922437436809776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137043065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137043063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 2
+  canStayHere: 1
+  hazardActive: 0
+  preHazardActive: 0
+  HazardOnsetManagerScript: {fileID: 830628499095700996}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!1 &1257273604
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +797,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1519731773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8580922437701780877, guid: 24161ee60e544a7408e29cc06f1659c3, type: 3}
+  m_PrefabInstance: {fileID: 8580922437436809776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519731775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519731773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dfff4f72ce2754c9cb7ed2acb5a9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTime: 2
+  canStayHere: 1
+  hazardActive: 0
+  preHazardActive: 0
+  HazardOnsetManagerScript: {fileID: 830628499095700996}
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!1 &1524566497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1260,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3235321932809241024, guid: 24161ee60e544a7408e29cc06f1659c3, type: 3}
   m_PrefabInstance: {fileID: 8580922437436809776}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6625819067825103857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625819067825103856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a3028fdce6bc046ae212d6606f5253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenCalibrationCube: {fileID: 0}
 --- !u!1001 &8228996411638608263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2145,7 +2227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3457320483934696060, guid: 24161ee60e544a7408e29cc06f1659c3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.07
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3457320483934696060, guid: 24161ee60e544a7408e29cc06f1659c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
